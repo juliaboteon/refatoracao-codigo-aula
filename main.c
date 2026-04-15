@@ -4,14 +4,14 @@
 int main() {
 float peso, altura, imc; 
 
-printf("peso:");
+printf("Digite seu peso:");
 scanf("%f", &peso);
-printf("altura:");
+printf("Digite sua altura:");
 scanf("%f", &altura);
 
 imc = peso / (altura * altura);
 
-printf("resultado: %.2f", imc);
+printf("\nSeu IMC é: %.2f \n", calculo(altura,peso));
 
 return 0;
 }
