@@ -1,17 +1,30 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
+#include <locale.h>
 
 int main() {
-float peso, altura, imc; 
+float calculo (float altura, float peso);
 
-printf("Digite seu peso:");
-scanf("%f", &peso);
-printf("Digite sua altura:");
-scanf("%f", &altura);
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
 
-imc = peso / (altura * altura);
+    float altura, peso;
 
-printf("\nSeu IMC é: %.2f \n", calculo(altura,peso));
+    printf("\nInforme o peso:\n");
+    scanf("%f", &peso);
 
-return 0;
+    printf("\nInforme a altura:\n");
+    scanf("%f", &altura);
+
+    printf("\nSeu IMC é: %.2f \n", calculo(altura,peso));
+    return 0;
+}
+
+float calculo(float altura, float peso)
+{
+    float imc;
+    imc = peso / pow(altura,2.0);
+    return imc;
 }
