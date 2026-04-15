@@ -2,16 +2,16 @@
 #include <math.h>
 
 int main() {
-float p, a, i; 
+float peso, altura, imc; 
 
 printf("peso:");
-scanf("%f", &p);
+scanf("%f", &peso);
 printf("altura:");
-scanf("%f", &a);
+scanf("%f", &altura);
 
-i = p / (a * a);
+imc = peso / (altura * altura);
 
-printf("resultado: %.2f", i);
+printf("resultado: %.2f", imc);
 
 return 0;
 }
